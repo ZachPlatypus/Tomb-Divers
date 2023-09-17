@@ -1,5 +1,8 @@
 # Changelog
 
+### v0.04
+Added asset images, began working on CSS and JS
+
 ### v0.03
 After tinkering for some time, opted to remove Kaboom library. This game is better served developed without a game engine.
 
