@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.05
+Major update, refractored code, made significant changes. Begun work on characters.
+Downloaded Ninja Adventure asset pack for the artwork for this game. Credited appropriately in README.
+
 ### v0.04
 Added asset images, began working on CSS and JS
 

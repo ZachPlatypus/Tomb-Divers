@@ -1,28 +1,30 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
 
-class Tomb{
-    constructor(config){
-        this.element = config.element;
-        this.canvas = this.element.querySelector("#game");
-    }
+/* const wall = new Image();
+    wall.src = './assets/img/dungeon_tiles.png';
+    wall.onload = function() {
+        const x = 100;
+        const y = 100;
 
-    init(){
-        console.log("test");
-        }
-    }
+        ctx.drawImage(image, x, y);
+    }; */
 
-//const image = new Image()
-    //this.onload = () => {
-        //this.drawImage(img, 0, 0)};
-        //img.src = "./assets/img/dungeon_tiles.png";
+const wall = new Image();
+wall.src = './assets/img/walls-and-tiles.png';
+wall.onload = () => {
+    const x = 0;
+    const y = 0;
 
-function newImage(url){
-    let image = document.createElement('img')
-    image.src = url
-    image.style.position = 'absolute'
-    document.body.append(image)
-    return image
-}
-
-newImage("./assets/img/dungeon_tiles.png")
+    ctx.drawImage(
+        wall, 
+        16, // left
+        96, // top
+        16, // width
+        16, // height
+        x, 
+        y,
+        32, // scale
+        32 // scale
+        );
+};
