@@ -26,7 +26,7 @@ h1{
     image-rendering: pixelated;
 }
 
-#knight{
+#character{
     position: relative;
     z-index: "422";
 }

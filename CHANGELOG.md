@@ -1,5 +1,8 @@
 # Changelog
 
+### v0.06
+GameObjects, drawing icons, placeholder image
+
 ### v0.05
 Major update, refractored code, made significant changes. Begun work on characters.
 Downloaded Ninja Adventure asset pack for the artwork for this game. Credited appropriately in README.

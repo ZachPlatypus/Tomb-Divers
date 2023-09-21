@@ -1,6 +1,6 @@
-const knight = new Image();
+/* const knight = new Image();
     knight.src = './assets/img/NinjaAdventure/Actor/Characters/Knight/SpriteSheet.png';
-    knight.id = 'knight';
+    knight.id = 'character';
     knight.onload = () => {
         const x = 0;
         const y = 0;
@@ -16,5 +16,25 @@ const knight = new Image();
             32,
             32
             );
-    };
+    }; */
 
+function character(){
+
+const knight = new GameObject({
+    x: 350,
+    y: 350,
+    src: './assets/img/NinjaAdventure/Actor/Characters/Knight/SpriteSheet.png',
+})
+
+const ninja = new GameObject({
+    x: 320,
+    y: 320,
+})
+
+setTimeout(() => {
+    knight.icon.drawIcon(this.ctx);
+    ninja.icon.drawIcon(this.ctx);
+}, 500)
+}
+
+character()

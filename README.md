@@ -1,4 +1,4 @@
-# Tomb Divers v0.05
+# Tomb Divers v0.06
 
 Milestone Project #1 for UNLV Software Development Bootcamp.
 

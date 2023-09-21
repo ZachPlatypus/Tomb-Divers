@@ -1,4 +1,54 @@
-function move(element) {
+class GameObject{
+    constructor(config){
+        this.x = config.x || 0;
+        this.y = config.y || 0;
+        this.icon = new Icon({
+            gameObject: this,
+            src: config.src || './assets/img/placeholder.png'
+        });
+    }
+}
+
+class Icon{
+    constructor(config){
+        this.image = new Image();
+        this.image.src = config.src;
+        this.image.id= config.id;
+        this.image.onload = () => {
+            this.loaded = true;
+        }
+
+        this.anims = config.anims || {
+            idleSouth: [
+                [0,0]
+            ]
+        }
+        this.currentAnim = config.currentAnim || "idleSouth";
+        this.animFrame = 0;
+        
+        this.gameObject = config.gameObject;
+
+        this.shadow = new Image();
+        this.shadow.src = './assets/img/NinjaAdventure/Actor/Characters/Shadow.png'
+        this.shadow.onLoad = () => {
+            this.shadowLoaded = true;
+        }
+    }
+
+    drawIcon(ctx){
+        const x = this.gameObject.x;
+        const y = this.gameObject.y;
+
+        this.loaded && ctx.drawImage(this.image, 
+            0, 0,
+            16, 16,
+            x, y,
+            32, 32
+            )
+    }
+}
+
+/* function move(element) {
     element.style.position = 'fixed'
 
     function moveToCoordinates(left, bottom) {
@@ -61,4 +111,4 @@ function move(element) {
         to: moveToCoordinates,
         withArrowKeys: moveWithArrowKeys
     }
-}
+} */
